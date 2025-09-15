@@ -1,20 +1,19 @@
 const botaoMostraPalavras = document.querySelector("#botao-palavrachave");
 
-botaoMostraPalavras.addEventListener("clik",mostraPalavrasChave);
+botaoMostraPalavras.addEventListener("click", mostraPalavrasChave);
 
-fuction mostraPalavrasChave(){
-  const texto=document.querySelector("#entrada-de-texto#).value; 
+function mostraPalavrasChave() {
+  const texto = document.querySelector("#entrada-de-texto").value;
 
-    cost camporesultado=document.querySelector("#resuntado-palavra"); 
+  const campoResultado = document.querySelector("#resultado-palavrachave");
 
-    const palavrasChaves=processaTexto(texto);
+  const palavrasChave = processaTexto(texto);
 
-    campoResultado.textCotent=palavrasChaves.join(",");
-  }
+  campoResultado.textContent = palavrasChave.join(", ");
+}
 
-  function processaTexto(texto){ 
-    let palavras = texto.split(/\P{L}+/u);
+function processaTexto(texto) {
+  let palavras = texto.split(/\P{L}+/u); 
 
-    return palavras;
-  }
-  
+  return palavras;
+}
